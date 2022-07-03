@@ -30,13 +30,14 @@ const lazyLoading = target => {
 targets.forEach(lazyLoading);
 
 
-console.log(window.pageYOffset, elDistanceToTop)
 
-
+addEventListener('scroll', function(target) {
+  console.log(window.pageYOffset)
+} );
 
   const heroObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting || entry.intersectionRatio > 0) {
+        if (entry.isIntersecting || window.pageYOffset < 200) {
             scrollToTop.classList.remove('opacity-100');
             scrollToTop.classList.add('opacity-0');
             console.log(entry)

@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .hero {
+        position: relative;
+        background-image: url("/a.jpg");
+        height: 100vh;
+        width: 896px;
+        margin: auto; 
+        background-size: cover;
+        background-position: bottom right;
+        -webkit-mask-image: url("/paint.png");
+        -webkit-mask-size: 100%;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat; 
+    }
+
+
+}

@@ -16,12 +16,9 @@
 
     <main class="md:max-w-screen-lg m-auto">
 
-        <div id="home" class="relative right-0 min-h-screen flex items-center">
-
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class=" w-2/4 m-auto hover:animate-pulse">
-          <path fill="#FF0066" d="M18.9,-36.1C28.8,-27.1,44,-30.6,58.2,-26.7C72.3,-22.8,85.3,-11.4,83.6,-1C81.9,9.5,65.6,18.9,53.5,26.4C41.4,33.9,33.7,39.4,25.5,49.7C17.3,60,8.6,75.2,-1.9,78.4C-12.3,81.7,-24.7,72.9,-29.5,60.6C-34.4,48.3,-31.7,32.5,-38.9,21.8C-46.1,11.2,-63.3,5.6,-71.8,-4.9C-80.4,-15.4,-80.3,-30.9,-71.3,-38.4C-62.2,-46,-44.2,-45.6,-30.8,-52.6C-17.4,-59.5,-8.7,-73.8,-2.1,-70.2C4.5,-66.6,9,-45,18.9,-36.1Z" transform="translate(100 100)" />
-        </svg>       
-        <h1 class="absolute right-0 text-5xl font-bold">Make your ideas a digital reality.</h1>
+        <div id="home" class="hero ">
+          
+        <!-- <h1 class="absolute text-5xl font-bold z-40">Make your ideas a digital reality.</h1> -->
 
       </div>
       
@@ -30,11 +27,11 @@
 
     <div class="relative">
    
-    <div id="nav" class="opacity-0 transition-opacity ease-in-out z-50 p-10 min-h-screen hidden md:flex flex-col md:text-right md:w-56 md:justify-start md:items-end md:fixed top-44 md:float-left md:p-0 lg:w-64">
-        <img src="/logo.png" alt="profile picture" class="mb-5 w-2/4"/>
-        <h2 class="text-4xl pb-2">Hassan Saeed</h2>
+    <div class="z-50 p-10 min-h-screen hidden md:flex flex-col md:text-right md:w-56 md:justify-start md:items-end md:fixed top-40 md:float-left md:p-0 lg:w-64">
+        <img src="/logo.png" alt="profile picture" class="mb-3 w-2/4"/>
+        <h2 class="text-4xl font-bold pb-2">Hassan Saeed</h2>
         <h3 class="text-2xl pb-2">Web Developer</h3>
-        <nav class="flex flex-col md:w-full">
+        <nav id="nav" class="flex flex-col opacity-0 transition-opacity duration-700 ease-in-out md:w-full">
           <a class="bg-gray-700 text-xl p-3 mb-1 rounded-lg" href="#home" data-nav>Home</a>
           <a class="bg-gray-700 text-xl p-3 mb-1 rounded-lg" href="#about" data-nav>About</a>
           <a class="bg-gray-700 text-xl p-3 mb-1 rounded-lg" href="#projects" data-nav>Projects</a>
@@ -45,16 +42,16 @@
    
 
 
-      <div class="p-10 md:p-0 md:ml-[30%] max-w-screen-md md:float-right">
+    <div class="p-10 md:p-0 md:ml-[30%] max-w-screen-md md:float-right">
 
 
-        <section id="about" class="mb-20">
-          <h3 class="mb-10 text-4xl font-bold relative after:absolute after:-bottom-2 after:left-0 after:w-10 after:h-2 after:bg-gradient-to-r  after:from-[#e61a5f] after:to-[#ca247c]">About</h3>
+        <section id="about" class="my-20">
+          <h3 class="mb-10 text-4xl font-bold relative after:absolute after:-bottom-2 after:left-0 after:w-10 after:h-2 after:bg-gradient-to-r after:to-[#C822FF] after:from-[#e61a5f]">About</h3>
           <p class="leading-loose indent-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga reprehenderit saepe nobis maxime! Facere dolor necessitatibus excepturi similique, nulla ducimus ullam quos autem quia. Praesentium natus provident reiciendis hic ipsum, eveniet ullam quaerat saepe quas iure repellendus ex alias possimus nobis iusto laborum culpa? Possimus, voluptas omnis ipsa illum praesentium quisquam ad fuga deleniti iure suscipit dicta, earum ab, nihil eos.</p>
         </section>
 
-        <section id="icons" class="mb-20">
-        <div class="grid grid-cols-auto-fill gap-2 p-5">
+        <section class="mb-20">
+        <div class="grid grid-cols-auto-fill justify-evenly items-center gap-2 p-5">
           
             <span
               class="iconify"
@@ -106,25 +103,23 @@
               data-width="80"
               data-height="80"
             ></span>
-            <span
-              class="iconify"
-              data-icon="logos:nodejs"
-              style="color: #00749c"
-              data-width="80"
+            <span 
+              class="iconify" 
+              data-icon="vscode-icons:file-type-node" 
+              data-width="80" 
               data-height="80"
             ></span>
-            <span
-              class="iconify"
-              data-icon="logos:express"
-              style="background-color: #ffffff"
-              data-width="80"
+            <span 
+              class="iconify" 
+              data-icon="simple-icons:express" 
+              data-width="80" 
               data-height="80"
             ></span>
-            <span
-              class="iconify"
-              data-icon="logos:mongodb"
-              data-width="100"
-              data-height="100"
+            <span 
+              class="iconify" 
+              data-icon="vscode-icons:file-type-mongo"
+              data-width="80"
+              data-height="80"
             ></span>
             <span
               class="iconify"
@@ -170,7 +165,7 @@
         </div>
         </section>
 
-
+        <div id="icons" class="h-0 w-0"></div>
 
 
         <section id="projects" class="mb-20">
@@ -225,13 +220,11 @@
         
            <div class="p-5">
              <h3 class="text-2xl font-bold">
-              Old Movies vs New Movies
+              This or That Movie?
              </h3>
                 <p>
-                  This or That is a simple "This or That?" game in which you can
-                   choose between two thematically related films. I
-                  wanted to transform a popular movie list into an interactive
-                  experience and this is the result. Check it out, maybe you'll
+                  I wanted to transform a popular movie list into an interactive
+                  experience. The list recommends an old and new movie which are thematically related so I felt a "this or that" style game would be fun. Check it out, maybe you'll
                   find a cool movie to watch this weekend!
                 </p>
                 <div class="flex my-3">
@@ -271,11 +264,34 @@
               Link Keeper
              </h3>
                 <p>
-                  A simple Chrome extension built with vanilla JavaScript. The
+                  A Chrome extension built with vanilla JavaScript. The
                   extension utilizes local storage to save and set the inputted
                   link or the link in the window's current tab. There is also an
                   option to download the list as a .csv file.
                 </p>
+                <div class="flex items-center my-3">
+                  <span
+                  class="iconify"
+                  data-icon="bxl:html5"
+                  style="color: #f06529"
+                  data-width="30"
+                  data-height="30"
+                ></span>
+                <span
+                  class="iconify"
+                  data-icon="bxl:css3"
+                  style="color: #2965f1"
+                  data-width="30"
+                  data-height="30"
+                ></span>
+                <span
+                  class="iconify"
+                  data-icon="logos:javascript"
+                  style="color: #f06529"
+                  data-width="20"
+                  data-height="20"
+                ></span>
+                </div>
            </div>
           </a>
 
@@ -290,9 +306,42 @@
              </h3>
                 <p>
                   A functional e-commerce shop experience for a gym equipment
-                  company. This web app is created with React for the frontend,
-                  Node/Express for the server, and MongoDB for the database.
+                  company. This web app is created with a React frontend,
+                  Node/Express server, and MongoDB database.
                 </p>
+                <div class="flex my-3 items-center">
+                  <span
+              class="iconify"
+              data-icon="logos:react"
+              data-width="30"
+              data-height="30"
+            ></span>
+          <span 
+            class="iconify" 
+            data-icon="vscode-icons:file-type-node" 
+            data-width="30" 
+            data-height="30"
+          ></span>
+          <span 
+            class="iconify" 
+            data-icon="simple-icons:express" 
+            data-width="30" 
+            data-height="30"
+            ></span>
+          <span 
+              class="iconify" 
+              data-icon="vscode-icons:file-type-mongo"
+              data-width="30"
+              data-height="30"
+            ></span>
+          <span
+            class="iconify"
+            data-icon="bxl:css3"
+            style="color: #2965f1"
+            data-width="30"
+            data-height="30"
+            ></span>
+            </div>
            </div>
           </a>
 
@@ -462,7 +511,7 @@
                 type="input" 
                 id="name" 
                 name="name" 
-                class="mb-5 rounded-lg leading-8 text-black p-2"
+                class="mb-5 rounded-lg leading-8 p-2 bg-gray-700"
                 required 
               />
             </div>
@@ -477,7 +526,7 @@
                 type="email" 
                 id="email" 
                 name="email" 
-                class="mb-5 rounded-lg leading-8 text-black p-2"
+                class="mb-5 rounded-lg leading-8 p-2 bg-gray-700"
                 required 
               />
             </div>
@@ -494,14 +543,14 @@
                 cols="40"
                 name="message"
                 id="message"
-                class="mb-5 rounded-lg leading-8 text-black p-2"
+                class="mb-5 rounded-lg leading-8 p-2 bg-gray-700"
                 required
               ></textarea>
             </div>
               <button 
                 id="submit" 
                 type="submit"
-                class="bg-gradient-to-r from-[#e61a5f] to-[#ca247c] rounded-lg p-5 col-span-2"
+                class="bg-gradient-to-r from-[#1A6DEA] to-[#C822FF] rounded-lg p-5 col-span-2 m-auto"
               >
                 Submit
               </button>
