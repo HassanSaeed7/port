@@ -5,7 +5,7 @@ const about = document.querySelector('#about');
 const projects = document.querySelector('#projects');
 const contact = document.querySelector('#contact');
 const icons = document.querySelector('#icons');
-const sections = [icons, projects, contact];
+const sections = [about, projects, contact];
 const navSections = [home, about, projects, contact];
 const scrollToTop = document.querySelector("#nav");
 var elDistanceToTop = window.pageYOffset + icons.getBoundingClientRect().top
@@ -30,17 +30,14 @@ const lazyLoading = target => {
 targets.forEach(lazyLoading);
 
 
-
-addEventListener('scroll', function(target) {
-  console.log(window.pageYOffset)
-} );
-
-  const heroObserver = new IntersectionObserver((entries, observer) => {
+//removes navbar when hero section is in view
+const heroObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting || window.pageYOffset < 200) {
-            scrollToTop.classList.remove('opacity-100');
-            scrollToTop.classList.add('opacity-0');
-            console.log(entry)
+        if (entry.isIntersecting) {
+          scrollToTop.classList.add('hidden');
+          scrollToTop.classList.remove('flex');
+          scrollToTop.classList.remove('opacity-100');
+          scrollToTop.classList.add('opacity-0')
         }
     })
   })
@@ -49,16 +46,24 @@ addEventListener('scroll', function(target) {
 
 
 
-
+//adds navbar after hero section
 const navObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-        if (window.pageYOffset == 0 && scrollToTop.classList.contains('opacity-100')) {
+        if (window.pageYOffset < 700 && scrollToTop.classList.contains('flex' && 'opacity-100')) {
+        scrollToTop.classList.remove("flex")
         scrollToTop.classList.remove("opacity-100")
-        scrollToTop.classList.add("opacity-100")
+        scrollToTop.classList.add("hidden")
+        scrollToTop.classList.add("opacity-0")
         }
       if (entry.isIntersecting) {
+        scrollToTop.classList.remove("hidden")
+        scrollToTop.classList.add("flex")
+        setTimeout(function() {
         scrollToTop.classList.remove("opacity-0")
         scrollToTop.classList.add("opacity-100")
+
+        }, 50)
+        
       } 
      
     })
@@ -69,13 +74,47 @@ const navObserver = new IntersectionObserver((entries, observer) => {
   })
 
 
+
+// addEventListener('scroll', function(target) {
+//   console.log(window.pageYOffset)
+// } );
+
+//   const heroObserver = new IntersectionObserver((entries, observer) => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting || window.pageYOffset < 200) {
+//             scrollToTop.classList.remove('opacity-100');
+//             scrollToTop.classList.add('opacity-0');
+//             console.log(entry)
+//         }
+//     })
+//   })
+
+//   heroObserver.observe(home);
+
+
+
+
+// const navObserver = new IntersectionObserver((entries, observer) => {
+//     entries.forEach(entry => {
+//         if (window.pageYOffset == 0 && scrollToTop.classList.contains('opacity-100')) {
+//         scrollToTop.classList.remove("opacity-100")
+//         scrollToTop.classList.add("opacity-100")
+//         }
+//       if (entry.isIntersecting) {
+//         scrollToTop.classList.remove("opacity-0")
+//         scrollToTop.classList.add("opacity-100")
+//       } 
+     
+//     })
+//   }); 
+
+//   sections.forEach(section => {
+//   navObserver.observe(section);
+//   })
+
+
   
 
-//   else {
-//     if (scrollToTop.classList.contains("opacity-0") && entry.boundingClientRect.y < 0) {
-//       scrollToTop.classList.add("opacity-100")
-//     } 
-//   } 
 
 // const navLi = sections => {
 //     const navObserver = new IntersectionObserver((entries, observer) => {
