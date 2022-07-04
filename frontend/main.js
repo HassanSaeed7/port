@@ -9,8 +9,8 @@ const icons = document.querySelector('#icons');
 const sections = [spot, icons, projects, contact];
 const navSections = [home, about, projects, contact];
 const scrollToTop = document.querySelector("#nav");
-var elDistanceToTop = window.pageYOffset + icons.getBoundingClientRect().top
-
+const logo = document.querySelector("#logo");
+let lastScroll = 0;
 
 //lazy loading images
 const lazyLoading = target => {
@@ -30,27 +30,10 @@ const lazyLoading = target => {
 }
 targets.forEach(lazyLoading);
 
-
-//removes navbar when hero section is in view
-const heroObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          scrollToTop.classList.add('hidden');
-          scrollToTop.classList.remove('flex');
-          scrollToTop.classList.remove('opacity-100');
-          scrollToTop.classList.add('opacity-0')
-        }
-    })
-  })
-
-  heroObserver.observe(home);
-
-
-
 //adds navbar after hero section
 const navObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-        if (window.pageYOffset < 500 && scrollToTop.classList.contains('flex' && 'opacity-100')) {
+        if (window.scrollY < 500 && scrollToTop.classList.contains('flex' && 'opacity-100')) {
         scrollToTop.classList.remove("flex")
         scrollToTop.classList.remove("opacity-100")
         scrollToTop.classList.add("hidden")
@@ -73,6 +56,29 @@ const navObserver = new IntersectionObserver((entries, observer) => {
   sections.forEach(section => {
   navObserver.observe(section);
   })
+
+
+
+// removes navbar when hero section is in view
+// const heroObserver = new IntersectionObserver((entries, observer) => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting && window.scrollY < 100 && logo.classList.contains('w-7/12')) {
+
+//           logo.classList.remove('w-7/12')
+//           logo.classList.add('w-4/12')
+//           scrollToTop.classList.add('hidden');
+//           scrollToTop.classList.remove('flex');
+//           scrollToTop.classList.remove('opacity-100');
+//           scrollToTop.classList.add('opacity-0')
+//         }
+//     })
+//   })
+
+//   heroObserver.observe(home);
+
+
+
+
 
 
 
@@ -148,6 +154,31 @@ const navObserver = new IntersectionObserver((entries, observer) => {
 
 
 
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    lastScroll = currentScroll;
 
+    let current = '';
+    navSections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (currentScroll >= (sectionTop)) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    const navLi = document.querySelectorAll('[data-nav]');
+    navLi.forEach(item => {
+      item.classList.add('bg-gray-800');
+      item.classList.remove('bg-purple-800');
+
+		const href = item.getAttribute('href').substring(1);
+		if (href === current && item.classList.contains('bg-gray-800')) {
+      item.classList.remove('bg-gray-800');
+      item.classList.add('bg-purple-800');
+     
+			
+		};
+	});
+});
 
 
