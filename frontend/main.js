@@ -2,10 +2,11 @@ const targets = document.querySelectorAll('[data-src]');
 const navItems = document.querySelectorAll('[data-nav]');
 const home = document.querySelector('#home');
 const about = document.querySelector('#about');
+const spot = document.querySelector('#spot');
 const projects = document.querySelector('#projects');
 const contact = document.querySelector('#contact');
 const icons = document.querySelector('#icons');
-const sections = [about, projects, contact];
+const sections = [spot, icons, projects, contact];
 const navSections = [home, about, projects, contact];
 const scrollToTop = document.querySelector("#nav");
 var elDistanceToTop = window.pageYOffset + icons.getBoundingClientRect().top
@@ -49,7 +50,7 @@ const heroObserver = new IntersectionObserver((entries, observer) => {
 //adds navbar after hero section
 const navObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-        if (window.pageYOffset < 700 && scrollToTop.classList.contains('flex' && 'opacity-100')) {
+        if (window.pageYOffset < 500 && scrollToTop.classList.contains('flex' && 'opacity-100')) {
         scrollToTop.classList.remove("flex")
         scrollToTop.classList.remove("opacity-100")
         scrollToTop.classList.add("hidden")

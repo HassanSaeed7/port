@@ -12,7 +12,7 @@
         margin: auto; 
         background-size: cover;
         background-position: bottom right;
-        -webkit-mask-image: url("/paint.png");
+        -webkit-mask-image: url("/paint.webp");
         -webkit-mask-size: 100%;
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat; 
