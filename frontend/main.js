@@ -170,12 +170,18 @@ window.addEventListener('scroll', () => {
     navLi.forEach(item => {
       item.classList.add('bg-gray-800');
       item.classList.remove('bg-purple-800');
+      item.classList.remove('w-full')
+      item.classList.add('w-5/6')
+
+      
 
 		const href = item.getAttribute('href').substring(1);
 		if (href === current && item.classList.contains('bg-gray-800')) {
       item.classList.remove('bg-gray-800');
       item.classList.add('bg-purple-800');
-     
+      item.classList.remove('w-5/6')
+      item.classList.add('w-full')
+      
 			
 		};
 	});
