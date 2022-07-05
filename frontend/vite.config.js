@@ -1,7 +1,12 @@
-module.exports = {
-    root: 'src',
-    build: {
-      outDir: '../dist',
-      emptyOutDir: true 
+import path from 'path'
+
+export default {
+  build: {
+    outDir: path.resolve(__dirname, 'dist'),
+    rollupOptions: {
+      input: {
+        index: path.resolve(__dirname, 'index.html'),
+      }
     }
   }
+}
