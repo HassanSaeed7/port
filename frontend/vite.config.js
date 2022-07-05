@@ -1,7 +1,7 @@
-module.exports = defineConfig({
+export default {
     build: {
       rollupOptions: {
         external: "dist"    
     }
-    }
-  })
+  }
+}
