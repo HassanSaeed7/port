@@ -180,9 +180,10 @@ window.addEventListener("scroll", () => {
     const href = li.getAttribute('href').substring(1);
 		if (href === current) {
       li.classList.remove("bg-gray-800");
+      li.classList.toggle("bg-indigo-800");
       li.classList.remove("w-5/6");
       li.classList.add("w-full"); 
-      li.classList.add("bg-indigo-800");
+      
 		}
   });
 });

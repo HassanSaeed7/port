@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'customPink': 'bg-gradient-to-r from-[#e61a5f] to-[#ca247c]'
+        'customPink': 'bg-gradient-to-r from-[#e61a5f] to-[#ca247c]',
+        'customBlack': 'rgba(0, 0, 0, 0.7)',
       },
       minHeight: {
         'half': '50vh',
