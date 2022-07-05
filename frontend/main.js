@@ -178,7 +178,7 @@ window.addEventListener("scroll", () => {
     li.classList.remove("w-full");
     li.classList.add("w-5/6");
     const href = li.getAttribute('href').substring(1);
-		if (href === current && li.classList.contains("bg-gray-800")) {
+		if (href === current) {
       li.classList.remove("bg-gray-800");
       li.classList.add("bg-indigo-800");
       li.classList.remove("w-5/6");
