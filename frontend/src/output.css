@@ -555,7 +555,7 @@ video {
   position: relative;
   background-image: url("/a.jpg");
   height: 100vh;
-  width: 896px;
+  width: 300px;
   margin: auto;
   background-size: cover;
   background-position: bottom right;
@@ -563,6 +563,12 @@ video {
   -webkit-mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+}
+
+@media screen and (min-width:896px) {
+  .hero {
+    width: 900px;
+  }
 }
 
 .absolute {
@@ -992,6 +998,10 @@ video {
 
   .md\:max-w-screen-lg {
     max-width: 1024px;
+  }
+
+  .md\:max-w-screen-md {
+    max-width: 768px;
   }
 
   .md\:items-end {
