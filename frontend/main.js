@@ -1,4 +1,4 @@
-import "./dist/output.css"
+import "/dist/output.css"
 const targets = document.querySelectorAll("[data-src]");
 const navItems = document.querySelectorAll("[data-nav]");
 const home = document.querySelector("#home");
