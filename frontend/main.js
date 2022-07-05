@@ -132,34 +132,57 @@ sections.forEach((section) => {
 
 // navSections.forEach(section => {
 //     navObserver.observe(section)
-// })
+// // })
 
+// window.addEventListener("scroll", () => {
+//   const currentScroll = window.pageYOffset;
+//   lastScroll = currentScroll;
+
+//   let current = "";
+//   navSections.forEach((section) => {
+//     const sectionTop = section.offsetTop;
+//     if (currentScroll >= sectionTop) {
+//       current = section.getAttribute("id");
+//     }
+//   });
+//   const navLi = document.querySelectorAll("[data-nav]");
+
+//   navLi.forEach((item) => {
+//     const href = item.getAttribute("href").substring(1);
+//     if (href === current) {
+//       item.classList.remove("bg-gray-800");
+//       item.classList.add("bg-indigo-900");
+//     } else {
+//           item.classList.add("bg-gray-800");
+
+//     }
+//   });
+// });
+
+
+
+const navLi = document.querySelectorAll("[data-nav]");
 window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
-  lastScroll = currentScroll;
-
   let current = "";
   navSections.forEach((section) => {
     const sectionTop = section.offsetTop;
-    if (currentScroll >= sectionTop) {
+    const sectionHeight = section.clientHeight;
+    if (scrollY >= sectionTop - sectionHeight / 100) {
       current = section.getAttribute("id");
     }
   });
 
-  const navLi = document.querySelectorAll("[data-nav]");
-  navLi.forEach((item) => {
-    item.classList.add("bg-gray-800");
-    item.classList.remove("bg-purple-800");
-    item.classList.remove("w-full");
-    item.classList.add("w-5/6");
-
-    const href = item.getAttribute("href").substring(1);
-    if (href === current && item.classList.contains("bg-gray-800")) {
-      item.classList.remove("bg-gray-800");
-      item.classList.add("bg-purple-800");
-      item.classList.remove("w-5/6");
-      item.classList.add("w-full");
-      item.classList.add("animate-pulse");
-    }
+  navLi.forEach((li) => {
+    li.classList.remove("bg-indigo-800")
+    li.classList.add("bg-gray-800");
+    li.classList.remove("w-full");
+    li.classList.add("w-5/6");
+    const href = li.getAttribute('href').substring(1);
+		if (href === current) {
+      li.classList.remove("bg-gray-800");
+      li.classList.remove("w-5/6");
+      li.classList.add("w-full"); 
+      li.classList.add("bg-indigo-800");
+		}
   });
 });
