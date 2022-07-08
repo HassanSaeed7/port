@@ -16,7 +16,13 @@
   </head>
   <body class="bg-[#1d1e21] text-white overflow-x-hidden animate-fadeIn">
     <main class="md:max-w-screen-lg m-auto">
-      <div id="home" class="hero"></div>
+      
+      <div id="home" class="hero">
+        
+      <video class="min-h-screen w-full" playsinline autoplay muted loop poster="a.webp">
+        <source src="city.mp4" type="video/mp4">
+      </video>
+      </div>
 
       <div class="relative">
         <div
@@ -71,12 +77,12 @@
               About
             </h3>
 
-            <p class="leading-loose indent-5" id="spot">
+            <p class="leading-loose indent-5">
               Hello, I am a web developer from Corona, California. In my free
               time, I enjoy cooking, watching movies, and lifting weights.
             </p>
 
-            <h4 class="text-lg font-bold my-2">Frontend Development</h4>
+            <h4 id="spot" class="text-lg font-bold my-2">Frontend Development</h4>
             <div class="flex flex-col">
              <img src="html.svg" alt='html' class='w-[80px] h-[80px]' /> 
              <div class="flex items-center gap-3">
@@ -192,6 +198,12 @@
             <img src="git.svg" alt="git" class='w-[80px] h-[80px]' />
             <span 
             class="iconify" 
+            data-icon="logos:bash-icon" 
+            data-width="50" 
+            data-height="50"
+            ></span>
+            <span 
+            class="iconify" 
             data-icon="logos:strapi" 
             data-width="50" 
             data-height="50"
@@ -202,19 +214,14 @@
             data-width="50" 
             data-height="50"
             ></span>
-            <span 
-            class="iconify" 
-            data-icon="logos:bash-icon" 
-            data-width="50" 
-            data-height="50"
-            ></span>
+            
             <span 
             class="iconify" 
             data-icon="logos:postman-icon" 
             data-width="50" 
             data-height="50"
             ></span>
-            <span 
+            <!-- <span 
             class="iconify" 
             data-icon="cib:jira" 
             style="color: #0052cc;" 
@@ -233,7 +240,7 @@
             style="color: #00749c"
             data-width="50"
             data-height="50"
-          ></span>
+          ></span> -->
           </div>
   
           </section>
