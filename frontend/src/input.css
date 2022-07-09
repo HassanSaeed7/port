@@ -5,14 +5,15 @@
 
 @layer components {
     .hero {
+        background-image: url('/a.webp');
         position: relative;
         height: 100vh;
         width: 300px;
         margin: auto; 
         background-size: cover;
-        background-position: center center;
-        -webkit-mask-image: url("/paint.webp");
-        -webkit-mask-size: 80%;
+        background-position: bottom center;
+        -webkit-mask-image: url("/paint.png");
+        -webkit-mask-size: 100%;
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-position: center center;
         mask-repeat: no-repeat; 

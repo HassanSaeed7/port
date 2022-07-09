@@ -75,12 +75,12 @@ window.addEventListener("scroll", () => {
     li.classList.remove("bg-indigo-800")
     li.classList.add("bg-gray-800");
     li.classList.remove("w-full");
-    li.classList.add("w-5/6");
+    li.classList.add("w-11/12");
     const href = li.getAttribute('href').substring(1);
 		if (href === current) {
       li.classList.remove("bg-gray-800");
       li.classList.add("bg-indigo-800");
-      li.classList.remove("w-5/6");
+      li.classList.remove("w-11/12");
       li.classList.add("w-full"); 
       
 		}
