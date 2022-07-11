@@ -3,15 +3,13 @@ const targets = document.querySelectorAll("[data-src]");
 const navItems = document.querySelectorAll("[data-nav]");
 const home = document.querySelector("#home");
 const about = document.querySelector("#about");
-const spot = document.querySelector("#spot");
 const projects = document.querySelector("#projects");
 const contact = document.querySelector("#contact");
 const icons = document.querySelector("#icons");
 const sections = [icons, projects, contact];
 const navSections = [home, about, projects, contact];
 const scrollToTop = document.querySelector("#nav");
-const logo = document.querySelector("#logo");
-let lastScroll = 0;
+
 
 //lazy loading images
 const lazyLoading = (target) => {
@@ -85,7 +83,7 @@ window.addEventListener("scroll", () => {
   navSections.forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
-    if (scrollY >= sectionTop - sectionHeight / 1000) {
+    if (scrollY >= sectionTop - sectionHeight / 500) {
       current = section.getAttribute("id");
     }
   });
