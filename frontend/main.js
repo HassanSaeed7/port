@@ -29,6 +29,7 @@ const lazyLoading = (target) => {
 };
 targets.forEach(lazyLoading);
 
+
 //adds navbar after hero section
 // const navObserver = new IntersectionObserver((entries, observer) => {
 //   entries.forEach((entry) => {
