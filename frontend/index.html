@@ -16,9 +16,10 @@
   </head>
   <body class="bg-[#1d1e21] text-white overflow-x-hidden animate-fadeIn">
     <div id="home" class="hero">
-      <!-- <video class="min-h-screen w-full" playsinline autoplay muted loop poster="a.webp">
-        <source src="city1.mp4" type="video/mp4">
-      </video> -->
+      <div class="absolute flex flex-col justify-center items-center md:hidden">
+        <h1 class="text-4xl font-bold">Hassan Saeed</h1>
+        <h2 class="text-2xl font-bold">Web Developer</h2>
+      </div>
     </div>
 
     <main class="md:max-w-screen-lg m-auto">
@@ -81,7 +82,9 @@
             </p>
 
             <h4 class="text-lg font-bold my-2">Frontend Development</h4>
-            <div class="flex flex-col bg-gray-800 rounded-lg divide-y divide-gray-700 p-5">
+            <div
+              class="flex flex-col bg-gray-800 rounded-lg divide-y divide-gray-700 p-5"
+            >
               <img src="html.svg" alt="html" class="w-[80px] h-[80px]" />
               <div class="flex items-center gap-3">
                 <img src="css.png" alt="css" class="w-[80px] h-[80px]" />
@@ -112,7 +115,7 @@
                 ></span>
               </div>
 
-              <div class="flex items-center gap-3">
+              <div class="flex flex-wrap items-center gap-3">
                 <img src="js.svg" alt="css" class="w-[80px] h-[80px]" />
                 <span
                   class="iconify justify-self-center"
@@ -197,7 +200,7 @@
             </div>
 
             <h4 class="text-lg font-bold my-2">Other</h4>
-            <div class="flex items-center gap-3 bg-gray-800 p-5 rounded-lg">
+            <div class="flex items-center flex-wrap gap-3 bg-gray-800 p-5 rounded-lg">
               <img src="git.svg" alt="git" class="w-[80px] h-[80px]" />
               <span
                 class="iconify"
@@ -224,26 +227,26 @@
                 data-width="50"
                 data-height="50"
               ></span>
-              <!-- <span 
-            class="iconify" 
-            data-icon="cib:jira" 
-            style="color: #0052cc;" 
-            data-width="50" 
-            data-height="50"
-            ></span>
-            <span 
-            class="iconify" 
-            data-icon="logos:shopify" 
-            data-width="50" 
-            data-height="50"
-            ></span>
-            <span
-            class="iconify justify-self-center"
-            data-icon="brandico:wordpress"
-            style="color: #00749c"
-            data-width="50"
-            data-height="50"
-          ></span> -->
+              <span
+                class="iconify"
+                data-icon="cib:jira"
+                style="color: #0052cc"
+                data-width="50"
+                data-height="50"
+              ></span>
+              <span
+                class="iconify"
+                data-icon="logos:shopify"
+                data-width="50"
+                data-height="50"
+              ></span>
+              <span
+                class="iconify justify-self-center"
+                data-icon="brandico:wordpress"
+                style="color: #00749c"
+                data-width="50"
+                data-height="50"
+              ></span>
             </div>
           </section>
 
@@ -709,7 +712,7 @@
                   value="https://hassansaeed.dev"
                 />
 
-                <div class="flex flex-col mr-2">
+                <div class="flex flex-col lg:mr-2">
                   <label for="name"> Name </label>
                   <input
                     type="input"
@@ -720,7 +723,7 @@
                   />
                 </div>
 
-                <div class="flex flex-col ml-2">
+                <div class="flex flex-col lg:ml-2">
                   <label for="email"> Email </label>
                   <input
                     type="email"
@@ -745,7 +748,7 @@
                 <button
                   id="submit"
                   type="submit"
-                  class="bg-indigo-800 rounded-lg p-5 col-span-2 m-auto"
+                  class="bg-indigo-800 w-full rounded-lg p-5 col-span-2 m-auto"
                 >
                   Submit
                 </button>

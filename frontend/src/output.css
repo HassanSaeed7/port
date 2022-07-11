@@ -555,7 +555,7 @@ video {
   background-image: url('/a.webp');
   position: relative;
   height: 100vh;
-  width: 300px;
+  width: 768px;
   margin: auto;
   background-size: cover;
   background-position: bottom center;
@@ -607,19 +607,14 @@ video {
   margin: 0px;
 }
 
-.my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
 
 .my-3 {
@@ -651,16 +646,8 @@ video {
   margin-top: 2.5rem;
 }
 
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
 .mb-5 {
   margin-bottom: 1.25rem;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
 }
 
 .flex {
@@ -699,10 +686,6 @@ video {
   min-height: 100vh;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-7\/12 {
   width: 58.333333%;
 }
@@ -725,6 +708,10 @@ video {
 
 .w-\[350px\] {
   width: 350px;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .w-16 {
@@ -764,12 +751,20 @@ video {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-end {
   align-items: flex-end;
 }
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .gap-3 {
@@ -821,15 +816,6 @@ video {
 
 .rounded-bl-lg {
   border-bottom-left-radius: 0.5rem;
-}
-
-.border-none {
-  border-style: none;
-}
-
-.border-r-gray-700 {
-  --tw-border-opacity: 1;
-  border-right-color: rgb(55 65 81 / var(--tw-border-opacity));
 }
 
 .bg-\[\#1d1e21\] {
@@ -1053,6 +1039,10 @@ video {
     display: grid;
   }
 
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:w-56 {
     width: 14rem;
   }
@@ -1087,6 +1077,42 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:hero {
+    background-image: url('/a.webp');
+    position: relative;
+    height: 100vh;
+    width: 768px;
+    margin: auto;
+    background-size: cover;
+    background-position: bottom center;
+    -webkit-mask-image: url("/paint.png");
+    -webkit-mask-size: 90%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+    mask-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (min-width:896px) {
+    .lg\:hero {
+      width: 1080px;
+    }
+  }
+
+  .lg\:mr-2 {
+    margin-right: 0.5rem;
+  }
+
+  .lg\:ml-2 {
+    margin-left: 0.5rem;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:w-64 {
     width: 16rem;
   }
