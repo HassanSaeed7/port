@@ -1,6 +1,5 @@
 import "./src/output.css";
 const targets = document.querySelectorAll("[data-src]");
-const navItems = document.querySelectorAll("[data-nav]");
 const home = document.querySelector("#home");
 const about = document.querySelector("#about");
 const projects = document.querySelector("#projects");
@@ -78,13 +77,15 @@ const heroObserver = new IntersectionObserver((entries, observer) => {
 
 heroObserver.observe(home);
 
+
+
 const navLi = document.querySelectorAll("[data-nav]");
 window.addEventListener("scroll", () => {
   let current = "";
   navSections.forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
-    if (scrollY >= sectionTop - sectionHeight / 500) {
+    if (scrollY >= sectionTop - sectionHeight / 1000) {
       current = section.getAttribute("id");
     }
   });
