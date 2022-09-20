@@ -28,34 +28,6 @@ const lazyLoading = (target) => {
 };
 targets.forEach(lazyLoading);
 
-
-//adds navbar after hero section
-// const navObserver = new IntersectionObserver((entries, observer) => {
-//   entries.forEach((entry) => {
-//     if (
-//       window.scrollY < 500 &&
-//       scrollToTop.classList.contains("flex" && "opacity-100")
-//     ) {
-//       scrollToTop.classList.remove("flex");
-//       scrollToTop.classList.remove("opacity-100");
-//       scrollToTop.classList.add("hidden");
-//       scrollToTop.classList.add("opacity-0");
-//     }
-//     if (entry.isIntersecting) {
-//       scrollToTop.classList.remove("hidden");
-//       scrollToTop.classList.add("flex");
-//       setTimeout(function () {
-//         scrollToTop.classList.remove("opacity-0");
-//         scrollToTop.classList.add("opacity-100");
-//       }, 50);
-//     }
-//   });
-// });
-
-// sections.forEach((section) => {
-//   navObserver.observe(section);
-// });
-
 // removes navbar when hero section is in view
 const heroObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
