@@ -52,6 +52,15 @@ const heroObserver = new IntersectionObserver((entries, observer) => {
 heroObserver.observe(home);
 
 
+// const projectObserver = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+      
+//     }
+//   })
+// });
+
+
 
 const navLi = document.querySelectorAll("[data-nav]");
 window.addEventListener("scroll", () => {
