@@ -8,6 +8,7 @@ const icons = document.querySelector("#icons");
 const sections = [icons, projects, contact];
 const navSections = [home, about, projects, contact];
 const scrollToTop = document.querySelector("#nav");
+const projectList = document.querySelectorAll("[data-project]");
 
 
 //lazy loading images
@@ -27,6 +28,7 @@ const lazyLoading = (target) => {
   newObserver.observe(target);
 };
 targets.forEach(lazyLoading);
+
 
 // removes navbar when hero section is in view
 const heroObserver = new IntersectionObserver((entries, observer) => {
@@ -76,3 +78,5 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+
