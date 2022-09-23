@@ -30,6 +30,26 @@ const lazyLoading = (target) => {
 targets.forEach(lazyLoading);
 
 
+const infoAnimation = (target) => {
+  const newObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        projectList.forEach((project) => {
+          project.classList.remove('opacity-0')
+          project.classList.add('opacity-100')
+
+        })
+        
+      }
+    });
+  });
+  newObserver.observe(target);
+};
+projectList.forEach(infoAnimation);
+
+
+
+
 // removes navbar when hero section is in view
 const heroObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
