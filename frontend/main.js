@@ -51,7 +51,7 @@ projectList.forEach(infoAnimation);
 
 
 // removes navbar when hero section is in view
-const heroObserver = new IntersectionObserver((entries, observer) => {
+const heroObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       scrollToTop.classList.remove("flex");
