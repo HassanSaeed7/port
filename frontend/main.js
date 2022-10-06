@@ -9,7 +9,8 @@ const sections = [icons, projects, contact];
 const navSections = [home, about, projects, contact];
 const scrollToTop = document.querySelector("#nav");
 const projectList = document.querySelectorAll("[data-project]");
-
+const navLi = document.querySelectorAll("[data-nav]");
+const preloader = document.querySelector("#preloader");
 
 //lazy loading images
 const lazyLoading = (target) => {
@@ -82,7 +83,7 @@ heroObserver.observe(home);
 
 
 
-const navLi = document.querySelectorAll("[data-nav]");
+
 window.addEventListener("scroll", () => {
   let current = "";
   navSections.forEach((section) => {
@@ -108,4 +109,9 @@ window.addEventListener("scroll", () => {
   });
 });
 
+
+window.addEventListener("load", () => {
+  
+  preloader.style.display = "none";
+})
 

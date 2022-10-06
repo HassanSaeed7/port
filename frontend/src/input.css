@@ -22,6 +22,16 @@
         align-items: center;
     }
 
+    .mid svg polygon {
+        stroke-dasharray: 50;
+        animation: midanim 2.5s linear infinite;
+    }
+    @keyframes midanim {
+      to {
+        stroke-dashoffset:100; 
+      }
+    }
+
 
     @media screen and (min-width:896px) {
        .hero {
