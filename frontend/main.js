@@ -110,8 +110,10 @@ window.addEventListener("scroll", () => {
 });
 
 
+//removes loading animation onload
 window.addEventListener("load", () => {
   
   preloader.style.display = "none";
 })
+
 
