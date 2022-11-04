@@ -8,7 +8,7 @@
         background-image: url('/a.webp');
         position: relative;
         height: 100vh;
-        width: 700px;
+        width: 400px;
         margin: auto; 
         background-size: cover;
         background-position: bottom center;
@@ -23,7 +23,7 @@
     }
 
     .mid svg polygon {
-        stroke-dasharray: 50;
+        stroke-dasharray: 55;
         animation: midanim 2.5s linear infinite;
     }
     @keyframes midanim {
