@@ -5,7 +5,6 @@ const about = document.querySelector("#about");
 const projects = document.querySelector("#projects");
 const contact = document.querySelector("#contact");
 const icons = document.querySelector("#icons");
-const sections = [icons, projects, contact];
 const navSections = [home, about, projects, contact];
 const scrollToTop = document.querySelector("#nav");
 const projectList = document.querySelectorAll("[data-project]");
@@ -72,14 +71,6 @@ const heroObserver = new IntersectionObserver((entries) => {
 
 heroObserver.observe(home);
 
-
-// const projectObserver = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     if (entry.isIntersecting) {
-      
-//     }
-//   })
-// });
 
 
 
