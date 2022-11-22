@@ -570,7 +570,7 @@ video {
 }
 
 .mid svg polygon {
-  stroke-dasharray: 50;
+  stroke-dasharray: 55;
   -webkit-animation: midanim 2.5s linear infinite;
           animation: midanim 2.5s linear infinite;
 }
@@ -641,6 +641,11 @@ video {
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .my-3 {
