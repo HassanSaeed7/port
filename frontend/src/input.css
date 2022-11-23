@@ -33,6 +33,19 @@
     }
 
 
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.02);
+      border-color: rgba(255, 255, 255, 0.1);
+      height: 260px;
+      position: relative;
+    }
+    .card::before {
+      position: absolute;
+      
+    }
+
+
     @media screen and (min-width:896px) {
        .hero {
         width: 1080px; 
